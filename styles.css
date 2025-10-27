@@ -13,6 +13,7 @@ body {
 img, picture, video, canvas, svg {
     display: block;
     max-width: 100%;
+    aspect-ratio: 1;
 }
 
 input, button, textarea, select {
@@ -29,6 +30,10 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
+}
+
+li {
+    list-style-type: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -48,18 +53,13 @@ h1, h2, h3, h4, h5, h6 {
     src: url('./assets/fonts/karla.ttf');
 }
 /* Variables */
-:root {
-    font-size: 62.5%;
-    --font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-    --font-logo: 'Black Chancery', var(--font-stack);
-    --font-main: 'Karla', var(--font-stack);
-}
-
 :root.light {
     --bg-foreground: #FFFFFF;
     --bg-background: #E2E8F0;
     --text-main: #151515;
     --text-fade: #686868;
+    --icon-selected: #151515;
+    --icon-fade: #9C9C9C;
 }
 
 :root.dark {
@@ -67,8 +67,33 @@ h1, h2, h3, h4, h5, h6 {
     --bg-background: #1D1D1D;
     --text-main: #E6E6E6;
     --text-fade: #9C9C9C;
+    --icon-selected: #73313c;
+    --icon-fade: #686868;
+}
+
+:root {
+    font-size: 62.5%;
+    --font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    --font-logo: 'Black Chancery', var(--font-stack);
+    --font-main: 'Karla', var(--font-stack);
+    --logo-width: 70px;
+    --icon-width: 32px;
+    --padding-sm: 1em;
+    --padding-lg: 1em;
+    --margin-sm: 1em;
+    --margin-lg: 3em;
 }
 /* Utilities */
+.logo {
+    width: var(--logo-width);
+    margin: var(--margin-sm);
+    margin-bottom: var(--margin-lg);
+}
+
+.icon {
+    width: var(--icon-width);
+    cursor: pointer;
+}
 /* Layout */
 body {
     font-family: var(--font-main);
@@ -77,3 +102,27 @@ body {
     grid-template-columns: auto 1fr;
 }
 /* Aside */
+aside {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background: var(--bg-foreground);
+    padding: var(--padding-sm);
+}
+
+.aside-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+
+main {
+    background: var(--bg-background);
+}

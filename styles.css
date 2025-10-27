@@ -58,9 +58,13 @@ h1, h2, h3, h4, h5, h6 {
 :root.light {
     --bg-foreground: #FFFFFF;
     --bg-background: #E2E8F0;
+    --text-main: #151515;
+    --text-fade: #686868;
 }
 
 :root.dark {
     --bg-foreground: #121212;
-    --bg-background: #1D1D1D; 
+    --bg-background: #1D1D1D;
+    --text-main: #E6E6E6;
+    --text-fade: #9C9C9C;
 }

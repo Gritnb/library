@@ -76,12 +76,18 @@ li {
     --font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     --font-logo: 'Black Chancery', var(--font-stack);
     --font-main: 'Karla', var(--font-stack);
+    --font-xlg: 3rem;
+    --font-lg: 2.4rem;
+    --font-md: 1.6rem;
+    --font-bold: 900;
     --logo-width: 70px;
     --icon-width: 32px;
+    --padding-lg: 3em;
     --padding-sm: 1em;
-    --padding-lg: 1em;
-    --margin-sm: 1em;
+    --padding-xs: .5em;
     --margin-lg: 3em;
+    --margin-sm: 1em;
+    --border-radius: 10px;
 }
 /* Utilities */
 .logo {
@@ -100,6 +106,14 @@ body {
     height: 100svh;
     display: grid;
     grid-template-columns: auto 1fr;
+}
+
+main {
+    padding: var(--padding-lg);
+    background: var(--bg-background);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto 1fr;
 }
 /* Aside */
 aside {
@@ -122,7 +136,45 @@ aside {
     align-items: center;
     gap: 3em;
 }
+/* Main Content */
+/*  */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-main {
-    background: var(--bg-background);
+.current-tab {
+    font-family: var(--font-logo);
+    font-size: var(--font-xlg);
+    font-weight: var(--font-bold);
+    color: var(--text-main);
+    letter-spacing: 1px;
+}
+
+.controls {
+    width: 60%;
+    display: flex;
+    gap: var(--padding-sm);
+}
+
+.search-field {
+    width: 100%;
+    background: var(--bg-foreground);
+    border-radius: var(--border-radius);
+    display: flex;
+    gap: var(--padding-sm);
+    padding: var(--padding-xs);
+}
+
+input {
+    width: 100%;
+    font-size: var(--font-md);
+    background: var(--bg-foreground);
+    color: var(--text-fade);
+    border: none;
+}
+
+input:focus {
+    outline: none;
 }

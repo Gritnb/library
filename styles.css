@@ -36,7 +36,25 @@ h1, h2, h3, h4, h5, h6 {
         interpolate-size: allow-keywords;
     }
 }
+/* Fonts */
+@font-face {
+    font-family: 'Black Chancery';
+    src: url('./assets/black-chancery.TTF');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('./assets/karla.ttf');
+}
 /* Variables */
+:root {
+    font-size: 62.5%;
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-logo: 'Black Chancery', var(--font-stack);
+    --font-main: 'Karla', var(--font-stack);
+}
+
 :root.light {
     --bg-foreground: #FFFFFF;
     --bg-background: #E2E8F0;

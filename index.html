@@ -75,7 +75,8 @@
                         <input type="text"
                                placeholder="Search a book...">
                     </div>
-                    <button class="theme-toggle">
+                    <button id="theme-toggle"
+                            class="large-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" 
                              viewBox="0 0 24 24"
                              class="icon-small icon-inactive"
@@ -94,8 +95,38 @@
                     </button>
                 </div>
             </header>
-            <section class="user-stats">
-                TEST
+            <section class="user-menu">
+                <button class="large-btn"
+                        id="notif-relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                         viewBox="0 0 24 24"
+                         class="icon-small">
+                         <title>Notifocations</title>
+                         <path fill="var(--icon-fade)" 
+                            d="M10 21H14C14 22.1 13.1 23 12 23S10 22.1 10 21M21 19V20H3V19L5 17V11C5 7.9 7 5.2 10 4.3V4C10 2.9 10.9 2 12 2S14 2.9 14 4V4.3C17 5.2 19 7.9 19 11V17L21 19M17 11C17 8.2 14.8 6 12 6S7 8.2 7 11V18H17V11Z" />
+                    </svg>
+                    <div class="badge">3</div>
+                </button>
+                <div class="current-user">
+                    <div id="notif-relative">
+                        <img src="./assets/images/profile-picture.png"
+                            alt="Your profile picture. "
+                            class="icon">
+                        <div class="available"></div>
+                    </div>
+                    <div class="user">
+                        <h2 class="user-text">
+                            <a href="https://www.flaticon.com/free-icons/about-me" title="About Me Icons">Marsha Mellow</a>
+                        </h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" 
+                             viewBox="0 0 24 24"
+                             class="icon-small">
+                            <title></title>
+                            <path fill="var(--icon-fade)"
+                                  d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                        </svg>
+                    </div>
+                </div>
             </section>
             <section class="user-stats">
                 TEST

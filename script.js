@@ -1,4 +1,4 @@
-document.querySelector('.theme-toggle').addEventListener('click', setTheme)
+document.getElementById('theme-toggle').addEventListener('click', setTheme)
 
 function setTheme() {
     const root = document.documentElement;

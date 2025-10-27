@@ -51,6 +51,7 @@ li {
 @font-face {
     font-family: 'Karla';
     src: url('./assets/fonts/karla.ttf');
+    font-display: swap;
 }
 /* Variables */
 :root.light {
@@ -209,4 +210,8 @@ input:focus {
 
 input::placeholder {
     font-style: italic;
+}
+/* RFDFGFHGD */
+.user-stats {
+    border: 1px solid red;
 }

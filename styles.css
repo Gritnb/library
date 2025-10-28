@@ -653,13 +653,6 @@ fieldset {
     align-items: center;
     border: none;
 }
-
-.form-divider {
-    width: 30%;
-    margin: var(--margin-xs);
-    border: none;
-    border-top: 1px solid var(--form-divider);
-}
 /* Input fields */
 .form-input {
     text-align: right;

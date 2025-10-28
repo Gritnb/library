@@ -63,7 +63,7 @@ export function displayBooks() {
 
         const bookStatus = document.createElement('p')
         bookStatus.classList.add('book-stat')
-        bookStatus.classList.add(`${book.status ? 'read' : 'pending'}`)
+        bookStatus.classList.add(`${book.status ? 'read-badge' : 'pending-badge'}`)
         bookStatus.textContent = `${book.status ? 'Read' : 'In queue'}`
 
         statusField.append(statusSpan)

@@ -580,7 +580,7 @@ input::placeholder {
     border: 1px solid var(--red-negative);
 }
 /* Status Badges */
-.read {
+.read-badge {
     border-radius: var(--border-radius);
     border: 1px solid #3AB549;
     color: #2a8134;
@@ -589,7 +589,7 @@ input::placeholder {
     cursor: pointer;
 }
 
-.pending {
+.pending-badge {
     border-radius: var(--border-radius);
     border: 1px solid #92400E;
     color: #92400E;

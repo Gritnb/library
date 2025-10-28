@@ -1,5 +1,6 @@
 import { library } from './library.js'
 import { displayBooks } from './displayBooks.js'
+import { setTheme } from './changeTheme.js'
 
 displayBooks()
 // Hooks
@@ -26,31 +27,3 @@ function addBookToLibrary(title, author, pages, status) {
     book.id = crypto.randomUUID()
     library.push(book)
 }
-
-function setTheme() {
-    const root = document.documentElement;
-    const dayIcon = document.getElementById('day-icon')
-    const nightIcon = document.getElementById('night-icon')
-
-    if (root.className === 'dark') {
-        dayIcon.classList.add('icon-inactive')
-        nightIcon.classList.remove('icon-inactive')
-    } else {
-        dayIcon.classList.remove('icon-inactive')
-        nightIcon.classList.add('icon-inactive')
-    }
-
-    const newTheme = root.className === 'dark' ? 'light' : 'dark';
-    root.className = newTheme;
-}
-
-console.log(library)
-
-
-const buttons = Array.from(document.querySelectorAll('.delete-btn'))
-
-buttons.forEach(button => {
-    button.addEventListener('click', (event) => {
-        console.log(event.target)
-    })
-})

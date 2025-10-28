@@ -32,11 +32,11 @@ function addBookToLibrary(title, author, pages, status) {
     library.push(book)
 }
 
-// function newForm() {
-//     const modal = document.querySelector('.form-container')
-//     modal.style.display = 'block'
+function newForm() {
+    const modal = document.querySelector('.form-container')
+    modal.style.display = 'block'
 
 
     
-// }
+}
 

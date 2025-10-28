@@ -660,8 +660,9 @@ fieldset {
     border: none;
     border-top: 1px solid var(--form-divider);
 }
-
+/* Input fields */
 .form-input {
+    text-align: right;
     width: 60%;
     padding: 0 var(--padding-xs);
 }
@@ -671,7 +672,29 @@ label {
     color: var(--text-fade);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.form-input:invalid {
+    border: 1px solid var(--red-negative);
+}
+
+.form-input:valid {
+    border: 1px solid lightgreen;
+}
+
+.form-input:placeholder-shown {
+    border: 1px solid transparent;
+}
+
 .form-buttons {
     margin-top: auto;
-    border: 1px solid red;
+
 }

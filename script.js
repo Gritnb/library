@@ -2,9 +2,15 @@ import { library } from './library.js'
 
 // Hooks
 const bookContainer = document.querySelector('.books')
+const totalBooks = document.querySelector('.total')
+const readBooks = document.querySelector('.read')
+const unreadBooks = document.querySelector('.unread')
 
-// Listeners
+// Listeners // UI Updates
 document.getElementById('theme-toggle').addEventListener('click', setTheme)
+totalBooks.textContent = library.length === 0 ? '0' : library.length
+readBooks.textContent = library.filter(book => book.status).length
+unreadBooks.textContent = library.filter(book => !book.status).length
 
 
 // Functions

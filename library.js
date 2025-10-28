@@ -1,10 +1,11 @@
 export let library = [
     {
-        title: 'Book 1',
-        author: 'Author 1',
-        pages: 324,
-        status: false,
+        title: 'Ulysses',
+        author: 'James Joyce',
+        pages: 732,
+        status: true,
         id: crypto.randomUUID(),
+        image: "./assets/books-samples/ulysses.jpg"
     },
     {
         title: 'Book 2',
@@ -19,48 +20,5 @@ export let library = [
         pages: 324,
         status: true,
         id: 3,
-    },
-    {
-        title: 'Book 4',
-        author: 'Author 4',
-        pages: 324,
-        status: false,
-        id: 4,
-    },
-    {
-        title: 'Book 5',
-        author: 'Author 5',
-        pages: 324,
-        status: true,
-        id: 5,
-    },
-    {
-        title: 'Book 2',
-        author: 'Author 2',
-        pages: 3534,
-        status: true,
-        id: crypto.randomUUID(),
-    },
-    {
-        title: 'Book 3',
-        author: 'Author 3',
-        pages: 324,
-        status: true,
-        id: 3,
-    },
-    {
-        title: 'Book 4',
-        author: 'Author 4',
-        pages: 324,
-        status: false,
-        id: 4,
-    },
-    {
-        title: 'Book 5',
-        author: 'Author 5',
-        pages: 324,
-        status: true,
-        id: 5,
     },
 ]
-

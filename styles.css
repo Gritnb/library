@@ -146,10 +146,6 @@ a {
     display: none;
 }
 
-.book-cover {
-    height: 180px;
-}
-
 ::-webkit-scrollbar {
     width: 7px;
 }
@@ -521,9 +517,14 @@ input::placeholder {
     align-items: center;
 }
 
+.book-cover {
+    height: 180px;
+    aspect-ratio: 3 / 4;
+}
+
 .book-info {
     flex: 1;
-    padding: var(--padding-sm);
+    padding: var(--padding-sm) var(--padding-md);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

@@ -12,7 +12,7 @@ export function displayBooks() {
 
         const cover = document.createElement('img')
         cover.classList.add('book-cover')
-        cover.src = './assets/images/placeholder-book.svg'
+        cover.src = `${book.image ? book.image : './assets/images/placeholder-book.svg'}`
         cover.alt = `Cover of the book: ${book.title}. `
         imageWrapper.append(cover)
 

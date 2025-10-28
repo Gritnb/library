@@ -4,14 +4,14 @@ export let library = [
         author: 'Author 1',
         pages: 324,
         status: false,
-        id: 1,
+        id: crypto.randomUUID(),
     },
     {
         title: 'Book 2',
         author: 'Author 2',
         pages: 324,
         status: true,
-        id: 2,
+        id: crypto.randomUUID,
     },
     // {
     //     title: 'Book 3',

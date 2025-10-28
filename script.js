@@ -1,7 +1,7 @@
 import { library } from './library.js'
+import { displayBooks } from './displayBooks.js'
 
 // Hooks
-const bookContainer = document.querySelector('.books')
 const totalBooks = document.querySelector('.total')
 const readBooks = document.querySelector('.read')
 const unreadBooks = document.querySelector('.unread')
@@ -25,19 +25,6 @@ function addBookToLibrary(title, author, pages, status) {
     book.id = crypto.randomUUID()
     library.push(book)
 }
-
-function displayBooks() {
-    library.forEach(book => {
-        const card = document.createElement('div')
-        card.classList.add('card')
-
-        
-
-        bookContainer.append(card)
-        
-    })
-}
-
 
 function setTheme() {
     const root = document.documentElement;

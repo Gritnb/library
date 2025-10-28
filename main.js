@@ -73,6 +73,8 @@ function formData(event) {
     const title = data.get('title')
     const author = data.get('author')
     const pages = data.get('pages')
+    const status = data.get('status')
+    console.log(status)
     addBookToLibrary(title, author, pages, status)
     form.reset()
     formContainer.style.display = 'none'

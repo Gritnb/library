@@ -2,6 +2,9 @@ import { library } from './library.js'
 
 export function displayBooks() {
     const bookContainer = document.querySelector('.books')
+    const totalBooks = document.querySelector('.total')
+    const readBooks = document.querySelector('.read')
+    const unreadBooks = document.querySelector('.unread')
     bookContainer.textContent = ''
 
     library.forEach(book => {
@@ -106,5 +109,9 @@ export function displayBooks() {
         card.append(bookInfo)
         card.append(bookIcons)
         bookContainer.append(card)
+
+        totalBooks.textContent = library.length === 0 ? '0' : library.length
+        readBooks.textContent = library.filter(book => book.status).length
+        unreadBooks.textContent = library.filter(book => !book.status).length
     })
 }

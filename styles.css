@@ -69,6 +69,7 @@ a {
     --input-focus: #151515;
     --green-positive: #3AB549;
     --red-negative: #B34D5E;
+    --border-positive: #3AB549;
 }
 
 :root.dark {
@@ -81,6 +82,7 @@ a {
     --input-focus: #73313C;
     --green-positive: #A6E2AD;
     --red-negative: #B34D5E;
+    --border-positive: #EF314C;
 }
 
 :root {
@@ -91,6 +93,7 @@ a {
     --font-xlg: 3rem;
     --font-lg: 2.4rem;
     --font-md: 1.6rem;
+    --font-sm: 1.3rem;
     --font-bold: 900;
     --logo-width: 70px;
     --icon-width: 32px;
@@ -104,6 +107,8 @@ a {
     --margin-sm: 1em;
     --border-radius: 10px;
     --button-size: 50px;
+    --icon-selected-green: #3AB549;
+
 }
 /* Utilities */
 .logo {
@@ -323,4 +328,59 @@ input::placeholder {
 
 .unread {
     color: var(--red-negative);
+}
+/* Newsletter */
+.newsletter {
+    border: 1px solid var(--border-positive);
+}
+/* Misc */
+.trends-promos {
+    border: 1px solid green;
+}
+
+.trends {
+    flex-direction: column;
+    align-items: flex-start;
+
+    border: 1px solid red;
+}
+
+.author {
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.author-details {
+    display: flex;
+    gap: var(--padding-md);
+}
+
+.author-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--padding-xs);
+}
+
+.profile-picture {
+    width: var(--logo-width);
+    aspect-ratio: 1;
+    border-radius: 100px;
+}
+
+.author-name {
+    font-size: var(--font-md);
+    color: var(--text-fade);
+}
+
+.author-work {
+    font-size: var(--font-sm);
+    color: var(--text-fade);
+}
+/* Books */
+.books-container {
+    border: 1px solid red;
 }

@@ -9,6 +9,10 @@ const totalBooks = document.querySelector('.total')
 const readBooks = document.querySelector('.read')
 const unreadBooks = document.querySelector('.unread')
 const bookContainer = document.querySelector('.books')
+const addNewBook = document.querySelector('.add-new-btn')
+const formContainer = document.querySelector('.form-container')
+const form = document.querySelector('.new-form')
+const cancel = document.querySelector('.cancel-btn')
 
 // Listeners // UI Updates
 totalBooks.textContent = library.length === 0 ? '0' : library.length
@@ -26,6 +30,17 @@ bookContainer.addEventListener('click', (event) => {
     }
 })
 
+addNewBook.addEventListener('click', () => {
+    formContainer.style.display = 'block'
+})
+
+cancel.addEventListener('click', () => {
+    form.reset()
+    formContainer.style.display = 'none'
+})
+
+form.addEventListener('submit', formData)
+
 // Functions
 function Book(title, author, pages, status) {
     this.title = title
@@ -34,7 +49,7 @@ function Book(title, author, pages, status) {
     this.status = status
 }
 
-function addBookToLibrary(title, author, pages, status) {
+function addBookToLibrary(title, author, pages, status = false) {
     const book = new Book(title, author, pages, status)
     book.id = crypto.randomUUID()
     library.push(book)
@@ -49,5 +64,20 @@ function deleteBook(bookID) {
 function swapStatus(bookID) {
     const index = library.findIndex(book => book.id === bookID)
     library[index].status = !library[index].status
+    displayBooks()
+}
+
+
+
+function formData(event) {
+    event.preventDefault()
+    const data = new FormData(event.target)
+    const title = data.get('title')
+    const author = data.get('author')
+    const pages = data.get('pages')
+    const status = true
+    addBookToLibrary(title, author, pages, status)
+    form.reset()
+    formContainer.style.display = 'none'
     displayBooks()
 }

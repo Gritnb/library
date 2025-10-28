@@ -281,21 +281,39 @@
             </section>       
         </main>
     <div class="form-container">
-        <form>
+        <form class="new-form">
             <h2 class="form-header">Add a new book</h2>
             <fieldset>
-                <label>Title:</label>
-                <input class="form-input">
+                <label for="title">Title:</label>
+                <input type='text'
+                       id="title"
+                       name="title"
+                       minlength="1"
+                       maxlength="32"
+                       class="form-input"
+                       required />
             </fieldset>
             <hr class="form-divider">
             <fieldset>
-                <label>Author:</label>
-                <input class="form-input">
+                <label for="author">Author:</label>
+                <input type="text"
+                       id="author"
+                       name="author"
+                       minlength="1"
+                       maxlength="16"
+                       class="form-input"
+                       required />
             </fieldset>
             <hr class="form-divider">
             <fieldset>
-                <label>Pages:</label>
-                <input class="form-input">
+                <label for="pages">Pages:</label>
+                <input type="number"
+                       id="pages"
+                       name="pages"
+                       min="1"
+                       max="100100"
+                       class="form-input"
+                       required>
             </fieldset>
             <hr class="form-divider">
             <fieldset>
@@ -303,8 +321,10 @@
                 <input class="form-input">
             </fieldset>
             <div class="form-buttons">
-                <button>Cancel</button>
-                <button>Add</button>
+                <button type="button"
+                        id="clear-btn">Cancel</button>
+                <button type="submit"
+                        id="submit-btn">Add</button>
             </div>
         </form>
     </div>

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
-        <script src="script.js" defer></script>
+        <script src="script.js" type="module" defer></script>
         <title>Library</title>
     </head>
     <body>
@@ -179,8 +179,17 @@
                 </svg>
             </section>
             <section class="books-container">
-                TESTBOOKS
-                
+                <div class="dashboard-controls">
+                    <h2 class="user-stat">Your Books</h2>
+                    <div class="controls-container">
+                        <button>test</button>
+                        <button>test</button>
+                        <button>test</button>
+                    </div>
+                </div>
+                <div class="books">
+                    <div class="card"></div>
+                </div>
             </section>
             <section class="trends-promos">
                 <article class="stat trends">
@@ -265,9 +274,7 @@
                         <button class="promo-btn">Join Now</button>
                     </div>
                 </article>
-            </section>
-
-                        
+            </section>       
         </main>
     </body> 
 </html>

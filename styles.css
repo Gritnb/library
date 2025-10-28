@@ -235,7 +235,7 @@ input::placeholder {
 /* User Panel */
 .user-menu {
     display: flex;
-    gap: var(--margin-md);
+    gap: var(--margin-sm);
 }
 
 #notif-relative {
@@ -454,5 +454,34 @@ input::placeholder {
 }
 /* Books */
 .books-container {
-    border: 1px solid red;
+    min-height: 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: var(--padding-md);
+}
+
+.dashboard-controls {
+    background: var(--bg-foreground);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-sm) var(--padding-md);
+}
+
+.books {
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    gap: var(--margin-md);
+    overflow-y: auto;
+
+    border: 1px solid green;
+}
+
+.card {
+    background: var(--bg-foreground);
+    border-radius: var(--border-radius);
+    
 }

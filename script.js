@@ -1,4 +1,36 @@
+import { library } from './library.js'
+
+// Hooks
+const bookContainer = document.querySelector('.books')
+
+// Listeners
 document.getElementById('theme-toggle').addEventListener('click', setTheme)
+
+
+// Functions
+function Book(title, author, pages, status) {
+    this.title = title
+    this.author = author
+    this.pages = pages
+    this.status = status
+}
+
+function addBookToLibrary(title, author, pages, status) {
+    const book = new Book(title, author, pages, status)
+    book.id = crypto.randomUUID()
+    library.push(book)
+}
+
+function displayBooks() {
+    library.forEach(book => {
+        const card = document.createElement('div')
+        card.classList.add('card')
+
+        bookContainer.append(card)
+        
+    })
+}
+
 
 function setTheme() {
     const root = document.documentElement;
@@ -16,3 +48,5 @@ function setTheme() {
     const newTheme = root.className === 'dark' ? 'light' : 'dark';
     root.className = newTheme;
 }
+
+displayBooks()

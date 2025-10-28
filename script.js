@@ -1,6 +1,7 @@
 import { library } from './library.js'
 import { displayBooks } from './displayBooks.js'
 
+displayBooks()
 // Hooks
 const totalBooks = document.querySelector('.total')
 const readBooks = document.querySelector('.read')
@@ -44,4 +45,12 @@ function setTheme() {
 }
 
 console.log(library)
-displayBooks()
+
+
+const buttons = Array.from(document.querySelectorAll('.delete-btn'))
+
+buttons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        console.log(event.target)
+    })
+})

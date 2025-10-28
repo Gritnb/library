@@ -1,6 +1,5 @@
 import { library } from './library.js'
 
-
 export function displayBooks() {
     const bookContainer = document.querySelector('.books')
 
@@ -53,17 +52,17 @@ export function displayBooks() {
                  <path fill="var(--icon-fade)"
                  d="M21,12L14,5V9C7,10 4,15 3,20C5.5,16.5 9,14.9 14,14.9V19L21,12Z" />
             </svg>
-            <button>
-                <svg xmlns="http://www.w3.org/2000/svg" 
-                     viewBox="0 0 24 24"
-                     class="icon-small">
-                     <title>Delete</title>
-                     <path fill="var(--icon-fade)"
-                           d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M9,8H11V17H9V8M13,8H15V17H13V8Z"/>
-                </svg>
-            </button>
         `
+        bookIcons.append(icons)
+
+        const button = document.createElement('button')
+        button.classList.add('delete-btn')
+        button.id = `${book.id}`
+        button.textContent = '🗑️'
+        bookIcons.append(button)
+        
         bookIcons.innerHTML = icons
+        bookIcons.append(button)
 
         card.append(imageWrapper)
         card.append(bookInfo)

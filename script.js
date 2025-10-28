@@ -12,7 +12,6 @@ totalBooks.textContent = library.length === 0 ? '0' : library.length
 readBooks.textContent = library.filter(book => book.status).length
 unreadBooks.textContent = library.filter(book => !book.status).length
 
-
 // Functions
 function Book(title, author, pages, status) {
     this.title = title

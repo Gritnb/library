@@ -21,6 +21,6 @@ export let library = [
         author: 'Gabriel García Márquez',
         pages: 432,
         status: true,
-        image: '/assets/books-samples/solitude.jpg'
+        image: './assets/books-samples/solitude.jpg'
     },
 ]

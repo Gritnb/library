@@ -405,32 +405,44 @@ input::placeholder {
 
 .promo-wrapper {
     border-radius: var(--border-radius);
-    background: #B34D5E66;
     background: #00000066;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     padding: var(--padding-md);
+}
+
+.promo-text-wrapper {
+    width: 80%;
+    background: #B34D5E;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--bg-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--margin-sm);
+    padding-block: var(--padding-sm);
+
 }
 
 .promo-header {
     font-size: var(--font-xlg);
     font-weight: 900;
-    border: 1px solid red;
+    color: var(--text-main);
+    line-height: 1;
 }
 
 .promo-teaser {
-    border: 1px solid red;
-    width: 80%;
-    font-size: var(--font-lg);
+    font-size: var(--font-md);
     font-weight: 600;
+    color: var(--text-main);
     line-height: 1;
 }
 
 .promo-btn {
-    border: 2px solid white;
+    border: 2px solid var(--bg-background);
     border-radius: var(--border-radius);
     background: #B34D5E;
     font-size: var(--font-lg);
@@ -439,9 +451,6 @@ input::placeholder {
     padding: var(--padding-xs) var(--padding-lg);
     cursor: pointer;
 }
-
-
-
 /* Books */
 .books-container {
     border: 1px solid red;

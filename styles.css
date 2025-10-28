@@ -531,6 +531,13 @@ input::placeholder {
     gap: var(--padding-sm);
 }
 
+.book-field {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .book-title {
     text-align: center;
     font-size: var(--font-lg);
@@ -571,4 +578,22 @@ input::placeholder {
 
 .add-new-btn:hover {
     border: 1px solid var(--red-negative);
+}
+/* Status Badges */
+.read {
+    border-radius: var(--border-radius);
+    border: 1px solid #3AB549;
+    color: #2a8134;
+    background: lightgreen;
+    padding: 0 var(--padding-xs);
+    cursor: pointer;
+}
+
+.pending {
+    border-radius: var(--border-radius);
+    border: 1px solid #92400E;
+    color: #92400E;
+    background: #e7d894;
+    padding: 0 var(--padding-xs);
+    cursor: pointer;
 }

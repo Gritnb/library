@@ -23,22 +23,53 @@ export function displayBooks() {
         bookTitle.classList.add('book-title')
         bookTitle.textContent = `${book.title}`
         bookInfo.append(bookTitle)
+        
+        const authorField = document.createElement('div')
+        authorField.classList.add('book-field')
+        
+        const authorSpan = document.createElement('span')
+        authorSpan.classList.add('book-stat')
+        authorSpan.textContent = 'Author: '
 
         const bookAuthor = document.createElement('p')
         bookAuthor.classList.add('book-stat')
-        bookAuthor.textContent = `By: ${book.author}`
-        bookInfo.append(bookAuthor)
+        bookAuthor.textContent = `${book.author}`
 
+        authorField.append(authorSpan)
+        authorField.append(bookAuthor)
+        bookInfo.append(authorField)
+
+        const pagesField = document.createElement('div')
+        pagesField.classList.add('book-field')
+
+        const pagesSpan = document.createElement('span')
+        pagesSpan.classList.add('book-stat')
+        pagesSpan.textContent = 'Pages: '
+        
         const bookPages = document.createElement('p')
         bookPages.classList.add('book-stat')
-        bookPages.textContent = `No. Pages: ${book.pages}`
-        bookInfo.append(bookPages)
+        bookPages.textContent = `${book.pages}`
+
+        pagesField.append(pagesSpan)
+        pagesField.append(bookPages)
+        bookInfo.append(pagesField)
+
+        const statusField = document.createElement('div')
+        statusField.classList.add('book-field')
+
+        const statusSpan = document.createElement('span')
+        statusSpan.classList.add('book-stat')
+        statusSpan.textContent = 'Status: '
 
         const bookStatus = document.createElement('p')
         bookStatus.classList.add('book-stat')
-        bookStatus.textContent = `Status: ${book.status ? 'Read' : 'In queue'}`
-        bookInfo.append(bookStatus)
-        
+        bookStatus.classList.add(`${book.status ? 'read' : 'pending'}`)
+        bookStatus.textContent = `${book.status ? 'Read' : 'In queue'}`
+
+        statusField.append(statusSpan)
+        statusField.append(bookStatus)
+        bookInfo.append(statusField)
+
         const bookIcons = document.createElement('div')
         bookIcons.classList.add('book-icons')
 

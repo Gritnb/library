@@ -34,6 +34,11 @@ export function displayBooks() {
         bookPages.textContent = `No. Pages: ${book.pages}`
         bookInfo.append(bookPages)
 
+        const bookStatus = document.createElement('p')
+        bookStatus.classList.add('book-stat')
+        bookStatus.textContent = `Status: ${book.status ? 'Read' : 'In queue'}`
+        bookInfo.append(bookStatus)
+        
         const bookIcons = document.createElement('div')
         bookIcons.classList.add('book-icons')
 

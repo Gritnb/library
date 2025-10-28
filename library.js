@@ -11,7 +11,7 @@ export let library = [
         title: 'Book 2',
         author: 'Author 2',
         pages: 3534,
-        status: true,
+        status: false,
         id: crypto.randomUUID(),
     },
     {

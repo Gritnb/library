@@ -337,7 +337,7 @@ input::placeholder {
 /* Misc */
 .trends-promos {
     display: grid;
-    grid-template-rows: auto 1fr 2fr;
+    grid-template-rows: auto 1fr;
     gap: var(--margin-md);
 }
 
@@ -396,6 +396,7 @@ input::placeholder {
 }
 /* Promo */
 .promo {
+    align-self: start;
     background: url('assets/images/promo-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;

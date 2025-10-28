@@ -31,6 +31,8 @@ function displayBooks() {
         const card = document.createElement('div')
         card.classList.add('card')
 
+        
+
         bookContainer.append(card)
         
     })
@@ -54,4 +56,5 @@ function setTheme() {
     root.className = newTheme;
 }
 
+console.log(library)
 displayBooks()

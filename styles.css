@@ -68,6 +68,7 @@ a {
     --icon-fade: #9C9C9C;
     --input-focus: #151515;
     --green-positive: #3AB549;
+    --red-negative: #B34D5E;
 }
 
 :root.dark {
@@ -78,7 +79,8 @@ a {
     --icon-selected: #73313C;
     --icon-fade: #686868;
     --input-focus: #73313C;
-    --green-positive: #3AB549;
+    --green-positive: #A6E2AD;
+    --red-negative: #B34D5E;
 }
 
 :root {
@@ -320,5 +322,5 @@ input::placeholder {
 }
 
 .unread {
-    color: crimson;
+    color: var(--red-negative);
 }

@@ -20,6 +20,10 @@ bookContainer.addEventListener('click', (event) => {
     if (event.target.className === 'delete-btn') {
         deleteBook(event.target.id)
     }
+    if (event.target.className.includes('read-badge') ||
+        event.target.className.includes('pending-badge')) {
+        swapStatus(event.target.id)
+    }
 })
 
 // Functions
@@ -39,5 +43,11 @@ function addBookToLibrary(title, author, pages, status) {
 function deleteBook(bookID) {
     const index = library.findIndex(book => book.id === bookID)
     library.splice(index, 1)
+    displayBooks()
+}
+
+function swapStatus(bookID) {
+    const index = library.findIndex(book => book.id === bookID)
+    library[index].status = !library[index].status
     displayBooks()
 }

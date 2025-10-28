@@ -688,6 +688,38 @@ input[type=number] {
 }
 
 .form-buttons {
+    width: 100%;
     margin-top: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.form-btn {
+    width: 35%;
+    font-size: var(--font-lg);
+    color: var(--text-main);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-cards);
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: -2px;
+}
+
+.cancel-btn {
+    background: var(--bg-foreground);
+    border: 1px solid transparent;
+}
+
+.cancel-btn:hover {
+    border: 1px solid var(--red-negative);
+}
+
+.submit-btn {
+    color: #2a8134;
+    background: lightgreen;
+    border: 1px solid lightgreen;
+}
+
+.submit-btn:hover {
+    border: 1px solid #2a8134;
 }

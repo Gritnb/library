@@ -105,6 +105,7 @@ a {
     --margin-lg: 3em;
     --margin-md: 2em;
     --margin-sm: 1em;
+    --margin-xs: .5em;
     --border-radius: 10px;
     --button-size: 50px;
     --icon-selected-green: #3AB549;
@@ -341,16 +342,19 @@ input::placeholder {
 .trends {
     flex-direction: column;
     align-items: flex-start;
-
-    border: 1px solid red;
+    gap: var(--padding-xs);
 }
 
 .author {
-    border: 1px solid red;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: var(--padding-xs);
+}
+
+.author:last-child {
+    margin-bottom: var(--margin-sm);
 }
 
 .author-details {
@@ -362,7 +366,6 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: var(--padding-xs);
 }
 
 .profile-picture {
@@ -379,6 +382,15 @@ input::placeholder {
 .author-work {
     font-size: var(--font-sm);
     color: var(--text-fade);
+}
+
+.divider {
+    width: 90%;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+    border-top: 1px solid var(--text-fade);
+    margin-block: var(--margin-xs);
 }
 /* Books */
 .books-container {

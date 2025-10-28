@@ -5,7 +5,6 @@ import { setTheme } from './changeTheme.js'
 displayBooks()
 // Hooks
 const toggleTheme = document.getElementById('theme-toggle')
-
 const bookContainer = document.querySelector('.books')
 const addNewBook = document.querySelector('.add-new-btn')
 const formContainer = document.querySelector('.form-container')
@@ -13,7 +12,15 @@ const form = document.querySelector('.new-form')
 const cancel = document.querySelector('.cancel-btn')
 
 // Listeners // UI Updates
+formContainer.addEventListener('click', (event) => {
+    if (event.target.className === 'form-container') {
+        form.reset()
+        formContainer.style.display = 'none'
+    }
+})
+
 toggleTheme.addEventListener('click', setTheme)
+
 bookContainer.addEventListener('click', (event) => {
     if (event.target.className === 'delete-btn') {
         deleteBook(event.target.id)

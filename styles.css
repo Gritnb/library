@@ -672,6 +672,10 @@ label,
     color: var(--text-fade);
 }
 
+label {
+    position: relative;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -718,7 +722,7 @@ input[type=number] {
     top: 20%;
     border-radius: 0;
     border: none;
-    border-bottom: 1px solid var(--text-main);
+    border-bottom: 2px solid var(--text-main);
     z-index: 1;
 }
 
@@ -769,4 +773,12 @@ input[type=number] {
 
 .submit-btn:hover {
     border: 1px solid #2a8134;
+}
+
+.required {
+    position: absolute;
+    top: -2px;
+    left: -8px;
+    color: var(--red-negative);
+    font-weight: 900;
 }

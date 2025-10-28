@@ -67,15 +67,12 @@ function swapStatus(bookID) {
     displayBooks()
 }
 
-
-
 function formData(event) {
     event.preventDefault()
     const data = new FormData(event.target)
     const title = data.get('title')
     const author = data.get('author')
     const pages = data.get('pages')
-    const status = true
     addBookToLibrary(title, author, pages, status)
     form.reset()
     formContainer.style.display = 'none'

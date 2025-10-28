@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="en" class="light">
+    <html lang="en" class="dark">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -317,10 +317,28 @@
                     placeholder="&nbsp"
                     required>
             </fieldset>
-            <fieldset>
-                <label>Status:</label>
-                <input class="form-input">
-            </fieldset>
+            <div class="radio-container">
+                <p class="radio-header">Status</p>
+                <div class="radio-buttons">
+                    <label class="radio read-badge">Read
+                        <input type="radio"
+                               class="radio-btn"
+                               name="status"
+                               id="status" 
+                            />
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="radio pending-badge">Not Read
+                        <input type="radio"
+                               class="radio-btn"
+                               name="status"
+                               id="status"
+                               checked
+                            />
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
             <div class="form-buttons">
                 <button type="button"
                         class="cancel-btn form-btn">Cancel</button>

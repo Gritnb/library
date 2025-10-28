@@ -129,6 +129,7 @@ a {
 
 .icon-small {
     width: var(--icon-width-sm);
+    cursor: pointer;
 }
 
 .large-btn {
@@ -500,7 +501,8 @@ input::placeholder {
     grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
     grid-auto-rows: .5fr;
     gap: calc(var(--margin-md) + var(--margin-sm));
-    padding: var(--padding-sm);
+    padding-block: var(--padding-sm);
+    padding-right: 5px;
     overflow-y: auto;
 }
 
@@ -646,22 +648,27 @@ form {
     color: var(--text-main);
 }
 
-fieldset {
+fieldset,
+.radio-container {
+    border: 1px solid red;
     width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border: none;
+    margin-block: var(--margin-xs);
 }
 /* Input fields */
 .form-input {
     text-align: right;
     width: 60%;
     padding: 0 var(--padding-xs);
+    box-shadow: var(--box-shadow-cards);
 }
 
-label {
-    font-size: var(--font-lg);
+label,
+.radio-header {
+    font-size: var(--font-md);
     color: var(--text-fade);
 }
 
@@ -673,6 +680,46 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
     -moz-appearance: textfield;
+}
+
+.radio-buttons {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.radio-btn {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.checkmark {
+    position: absolute;
+    background: transparent;
+    border-radius: var(--border-radius);
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.radio:hover .radio-btn ~ .checkmark,
+.radio .radio-btn:checked ~ .checkmark {
+    top: 20%;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--text-main);
+    z-index: 1;
 }
 
 .form-input:invalid {

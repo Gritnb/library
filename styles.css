@@ -356,7 +356,7 @@ input::placeholder {
 }
 /* Newsletter */
 .newsletter {
-    border: 1px solid var(--border-positive);
+    border: 1px solid var(--red-negative);
 }
 /* Misc */
 .trends-promos {

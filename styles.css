@@ -67,6 +67,7 @@ a {
     --icon-selected: #151515;
     --icon-fade: #9C9C9C;
     --input-focus: #151515;
+    --green-positive: #3AB549;
 }
 
 :root.dark {
@@ -77,6 +78,7 @@ a {
     --icon-selected: #73313C;
     --icon-fade: #686868;
     --input-focus: #73313C;
+    --green-positive: #3AB549;
 }
 
 :root {
@@ -92,6 +94,7 @@ a {
     --icon-width: 32px;
     --icon-width-sm: 24px;
     --padding-lg: 3em;
+    --padding-md: 2em;
     --padding-sm: 1em;
     --padding-xs: .5em;
     --margin-lg: 3em;
@@ -137,9 +140,11 @@ body {
     height: 100svh;
     display: grid;
     grid-template-columns: auto 1fr;
+    overflow: hidden;
 }
 
 main {
+    min-height: 0;
     padding: var(--padding-lg);
     background: var(--bg-background);
     display: grid;
@@ -250,7 +255,6 @@ input::placeholder {
     width: 100%;
     background: var(--bg-foreground);
     border-radius: var(--border-radius);
-    color: var(--text-fade);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -265,6 +269,7 @@ input::placeholder {
 
 .user-text {
     font-size: var(--font-md);
+    color: var(--text-fade);
 }
 
 .available {
@@ -275,4 +280,45 @@ input::placeholder {
     aspect-ratio: 1;
     background: green;
     border-radius: 100px;
+}
+/* User Stats */
+.user-stats {
+    display: flex;
+    gap: var(--margin-md);
+}
+
+.stat {
+    flex: 1;
+    background: var(--bg-foreground);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-sm) var(--padding-md);
+    border-radius: var(--border-radius);
+}
+
+.stat-head {
+    display: flex;
+    align-items: center;
+    gap: var(--margin-md);
+}
+
+.user-stat {
+    font-size: var(--font-lg);
+    color: var(--text-fade);
+    letter-spacing: -2px;
+}
+
+.stat-num {
+    font-size: var(--font-xlg);
+    color: var(--text-main);
+    line-height: 0;
+}
+
+.read {
+    color: var(--green-positive);
+}
+
+.unread {
+    color: crimson;
 }

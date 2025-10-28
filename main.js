@@ -8,7 +8,7 @@ const toggleTheme = document.getElementById('theme-toggle')
 const totalBooks = document.querySelector('.total')
 const readBooks = document.querySelector('.read')
 const unreadBooks = document.querySelector('.unread')
-const deleteBtns = Array.from(document.querySelectorAll('.delete-btn'))
+const bookContainer = document.querySelector('.books')
 
 // Listeners // UI Updates
 totalBooks.textContent = library.length === 0 ? '0' : library.length
@@ -16,8 +16,10 @@ readBooks.textContent = library.filter(book => book.status).length
 unreadBooks.textContent = library.filter(book => !book.status).length
 
 toggleTheme.addEventListener('click', setTheme)
-deleteBtns.forEach(button => {
-    button.addEventListener('click', deleteBook)
+bookContainer.addEventListener('click', (event) => {
+    if (event.target.className === 'delete-btn') {
+        deleteBook(event.target.id)
+    }
 })
 
 // Functions
@@ -34,8 +36,8 @@ function addBookToLibrary(title, author, pages, status) {
     library.push(book)
 }
 
-function deleteBook(event) {
-    const identifier = event.target.id
-    const bookToDelete = library.filter(book => !book.id === identifier)
-    library = bookToDelete
+function deleteBook(bookID) {
+    const index = library.findIndex(book => book.id === bookID)
+    library.splice(index, 1)
+    displayBooks()
 }

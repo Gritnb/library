@@ -149,6 +149,20 @@ a {
 .book-cover {
     height: 180px;
 }
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: var(--red-negative);
+    border-radius: 10px;
+    cursor: pointer;
+}
 /* Layout */
 body {
     font-family: var(--font-main);

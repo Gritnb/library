@@ -494,8 +494,8 @@ input::placeholder {
 .books {
     min-height: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-auto-rows: 350px;
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    grid-auto-rows: .5fr;
     gap: calc(var(--margin-md) + var(--margin-sm));
     padding: var(--padding-sm);
     overflow-y: auto;
@@ -532,8 +532,11 @@ input::placeholder {
 }
 
 .book-title {
+    text-align: center;
     font-size: var(--font-lg);
     color: var(--text-fade);
+    line-height: 1;
+    letter-spacing: -1px;
 }
 
 .book-stat {

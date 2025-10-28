@@ -1,24 +1,25 @@
 export let library = [
     {
+        id: crypto.randomUUID(),
         title: 'Ulysses',
         author: 'James Joyce',
         pages: 732,
         status: true,
-        id: crypto.randomUUID(),
         image: "./assets/books-samples/ulysses.jpg"
     },
     {
-        title: 'Book 2',
-        author: 'Author 2',
-        pages: 3534,
-        status: false,
         id: crypto.randomUUID(),
+        title: 'The Great Gatsby',
+        author: 'F. Scott Fitzgerald',
+        pages: 180,
+        status: false,
+        image: './assets/books-samples/great-gatsby.jpg'
     },
     {
-        title: 'Book 3',
-        author: 'Author 3',
-        pages: 324,
+        id: crypto.randomUUID(),
+        title: 'One Hundred Years of Solitude',
+        author: 'Gabriel García Márquez',
+        pages: 432,
         status: true,
-        id: 3,
     },
 ]

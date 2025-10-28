@@ -548,3 +548,23 @@ input::placeholder {
     gap: var(--padding-sm);
     padding: var(--padding-sm);
 }
+/* New Book */
+.add-new-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--margin-xs);
+    background: var(--bg-background);
+    box-shadow: var(--box-shadow-cards);
+    border: 1px solid transparent;
+    border-radius: var(--border-radius);
+    font-size: var(--font-lg);
+    color: var(--text-main);
+    letter-spacing: -2px;
+    padding: 0 var(--padding-sm);
+    cursor: pointer;
+}
+
+.add-new-btn:hover {
+    border: 1px solid var(--red-negative);
+}

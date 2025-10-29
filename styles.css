@@ -592,6 +592,7 @@ input::placeholder {
     background: lightgreen;
     padding: 0 var(--padding-xs);
     cursor: pointer;
+    user-select: none;
 }
 
 .pending-badge {
@@ -601,6 +602,7 @@ input::placeholder {
     background: #e7d894;
     padding: 0 var(--padding-xs);
     cursor: pointer;
+    user-select: none;
 }
 /* Delete Button */
 .delete-btn {

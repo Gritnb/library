@@ -1,4 +1,5 @@
-import { library} from './library.js'
+import { library } from './library.js'
+import { Book } from './book.js'
 import { displayBooks } from './displayBooks.js'
 import { setTheme } from './changeTheme.js'
 
@@ -45,21 +46,6 @@ cancel.addEventListener('click', () => {
 form.addEventListener('submit', formData)
 
 // Functions
-class Book {
-    constructor(title, author, pages, status) {
-        this.title = title
-        this.author = author
-        this.pages = pages
-        this.status = status
-        this.id = crypto.randomUUID()
-    }
-}
-
-// function swapStatus(bookID) {
-//     const index = library.books.findIndex(book => book.id === bookID)
-//     library.books[index].status = !library.books[index].status
-//     displayBooks()
-// }
 
 function formData(event) {
     event.preventDefault()

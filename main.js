@@ -28,7 +28,8 @@ bookContainer.addEventListener('click', (event) => {
     }
     if (event.target.className.includes('read-badge') ||
         event.target.className.includes('pending-badge')) {
-        swapStatus(event.target.id)
+        library.swapStatus(event.target.id)
+        displayBooks()
     }
 })
 
@@ -54,11 +55,11 @@ class Book {
     }
 }
 
-function swapStatus(bookID) {
-    const index = library.findIndex(book => book.id === bookID)
-    library[index].status = !library[index].status
-    displayBooks()
-}
+// function swapStatus(bookID) {
+//     const index = library.books.findIndex(book => book.id === bookID)
+//     library.books[index].status = !library.books[index].status
+//     displayBooks()
+// }
 
 function formData(event) {
     event.preventDefault()

@@ -12,7 +12,10 @@ class Library {
         this.books.splice(index, 1)
     }
     
-
+    swapStatus(id) {
+        const index = this.books.findIndex(book => book.id === id)
+        this.books[index].status = !this.books[index].status
+    }
 }
 
 const library = new Library()
@@ -50,20 +53,4 @@ library.add(
     }
 )
 
-class Book {
-    constructor(title, author, pages, status) {
-        this.title = title
-        this.author = author
-        this.pages = pages
-        this.status = status
-        this.id = crypto.randomUUID()
-    }
-}
-
 export { library };
-
-// function deleteBook(bookID) {
-//     const index = library.findIndex(book => book.id === bookID)
-//     library.splice(index, 1)
-//     displayBooks()
-// }

@@ -18,6 +18,10 @@ class Library {
     swapStatus(id) {
         this.books[this.getID(id)].status = !this.books[this.getID(id)].status
     }
+
+    total() {
+        return this.books.length
+    }
 }
 
 const library = new Library()

@@ -113,7 +113,6 @@ a {
     --border-radius: 10px;
     --button-size: 50px;
     --icon-selected-green: #3AB549;
-
 }
 /* Utilities */
 .logo {
@@ -450,7 +449,6 @@ input::placeholder {
     text-align: center;
     gap: var(--margin-sm);
     padding-block: var(--padding-sm);
-
 }
 
 .promo-header {
@@ -512,7 +510,6 @@ input::placeholder {
     box-shadow: var(--box-shadow-cards);
     display: flex;
     flex-direction: column;
-
 }
 
 .image-wrapper {

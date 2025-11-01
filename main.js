@@ -1,4 +1,4 @@
-import { library } from './library.js'
+import { library} from './library.js'
 import { displayBooks } from './displayBooks.js'
 import { setTheme } from './changeTheme.js'
 
@@ -53,10 +53,12 @@ class Book {
     }
 }
 
-function addBookToLibrary(title, author, pages, status = false) {
-    const book = new Book(title, author, pages, status)
-    library.push(book)
-}
+
+
+// function addBookToLibrary(title, author, pages, status = false) {
+//     const book = new Book(title, author, pages, status)
+//     library.push(book)
+// }
 
 function deleteBook(bookID) {
     const index = library.findIndex(book => book.id === bookID)
@@ -78,7 +80,8 @@ function formData(event) {
     const pages = data.get('pages')
     const status = data.get('status')
     console.log(status)
-    addBookToLibrary(title, author, pages, status)
+    const book = new Book(title, author, pages, status)
+    library.addBook(book)
     form.reset()
     formContainer.style.display = 'none'
     displayBooks()

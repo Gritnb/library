@@ -7,6 +7,10 @@ export function displayBooks() {
     const unreadBooks = document.querySelector('.unread')
     bookContainer.textContent = ''
 
+    totalBooks.textContent = library.total() 
+    readBooks.textContent = library.books.filter(book => book.status).length
+    unreadBooks.textContent = library.books.filter(book => !book.status).length
+
     library.books.forEach(book => {
         const card = document.createElement('div')
         card.classList.add('card')
@@ -109,9 +113,5 @@ export function displayBooks() {
         card.append(bookInfo)
         card.append(bookIcons)
         bookContainer.append(card)
-
-        totalBooks.textContent = library.books.length === 0 ? '0' : library.books.length
-        readBooks.textContent = library.books.filter(book => book.status).length
-        unreadBooks.textContent = library.books.filter(book => !book.status).length
     })
 }

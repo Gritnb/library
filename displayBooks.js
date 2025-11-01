@@ -110,7 +110,7 @@ export function displayBooks() {
         card.append(bookIcons)
         bookContainer.append(card)
 
-        totalBooks.textContent = library.books.length === 0 ? '0' : library.length
+        totalBooks.textContent = library.books.length === 0 ? '0' : library.books.length
         readBooks.textContent = library.books.filter(book => book.status).length
         unreadBooks.textContent = library.books.filter(book => !book.status).length
     })

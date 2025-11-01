@@ -23,7 +23,8 @@ toggleTheme.addEventListener('click', setTheme)
 
 bookContainer.addEventListener('click', (event) => {
     if (event.target.className === 'delete-btn') {
-        deleteBook(event.target.id)
+        library.delete(event.target.id)
+        displayBooks()
     }
     if (event.target.className.includes('read-badge') ||
         event.target.className.includes('pending-badge')) {
@@ -53,19 +54,6 @@ class Book {
     }
 }
 
-
-
-// function addBookToLibrary(title, author, pages, status = false) {
-//     const book = new Book(title, author, pages, status)
-//     library.push(book)
-// }
-
-function deleteBook(bookID) {
-    const index = library.findIndex(book => book.id === bookID)
-    library.splice(index, 1)
-    displayBooks()
-}
-
 function swapStatus(bookID) {
     const index = library.findIndex(book => book.id === bookID)
     library[index].status = !library[index].status
@@ -81,7 +69,7 @@ function formData(event) {
     const status = data.get('status')
     console.log(status)
     const book = new Book(title, author, pages, status)
-    library.addBook(book)
+    library.add(book)
     form.reset()
     formContainer.style.display = 'none'
     displayBooks()

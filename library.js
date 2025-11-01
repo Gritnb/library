@@ -3,15 +3,21 @@ class Library {
         this.books = []
     }
 
-    addBook(book) {
+    add(book) {
         this.books.push(book)
     }
+
+    delete(id) {
+        const index = this.books.findIndex(book => book.id === id)
+        this.books.splice(index, 1)
+    }
+    
 
 }
 
 const library = new Library()
 
-library.addBook(
+library.add(
     {
         id: crypto.randomUUID(),
         title: 'Ulysses',
@@ -22,7 +28,7 @@ library.addBook(
     }
 )
 
-library.addBook(
+library.add(
     {
         id: crypto.randomUUID(),
         title: 'The Great Gatsby',
@@ -33,7 +39,7 @@ library.addBook(
     }
 )
 
-library.addBook(
+library.add(
     {
         id: crypto.randomUUID(),
         title: 'One Hundred Years of Solitude',
@@ -55,3 +61,9 @@ class Book {
 }
 
 export { library };
+
+// function deleteBook(bookID) {
+//     const index = library.findIndex(book => book.id === bookID)
+//     library.splice(index, 1)
+//     displayBooks()
+// }

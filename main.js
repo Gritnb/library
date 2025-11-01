@@ -1,4 +1,5 @@
 import { library } from './library.js'
+import { Book } from './book.js'
 import { displayBooks } from './displayBooks.js'
 import { setTheme } from './changeTheme.js'
 
@@ -23,11 +24,13 @@ toggleTheme.addEventListener('click', setTheme)
 
 bookContainer.addEventListener('click', (event) => {
     if (event.target.className === 'delete-btn') {
-        deleteBook(event.target.id)
+        library.delete(event.target.id)
+        displayBooks()
     }
     if (event.target.className.includes('read-badge') ||
         event.target.className.includes('pending-badge')) {
-        swapStatus(event.target.id)
+        library.swapStatus(event.target.id)
+        displayBooks()
     }
 })
 
@@ -43,33 +46,6 @@ cancel.addEventListener('click', () => {
 form.addEventListener('submit', formData)
 
 // Functions
-class Book {
-    constructor(title, author, pages, status) {
-        this.title = title
-        this.author = author
-        this.pages = pages
-        this.status = status
-        this.id = crypto.randomUUID()
-    }
-}
-
-function addBookToLibrary(title, author, pages, status = false) {
-    const book = new Book(title, author, pages, status)
-    library.push(book)
-}
-
-function deleteBook(bookID) {
-    const index = library.findIndex(book => book.id === bookID)
-    library.splice(index, 1)
-    displayBooks()
-}
-
-function swapStatus(bookID) {
-    const index = library.findIndex(book => book.id === bookID)
-    library[index].status = !library[index].status
-    displayBooks()
-}
-
 function formData(event) {
     event.preventDefault()
     const data = new FormData(event.target)
@@ -77,8 +53,8 @@ function formData(event) {
     const author = data.get('author')
     const pages = data.get('pages')
     const status = data.get('status')
-    console.log(status)
-    addBookToLibrary(title, author, pages, status)
+    const book = new Book(title, author, pages, status)
+    library.add(book)
     form.reset()
     formContainer.style.display = 'none'
     displayBooks()

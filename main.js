@@ -43,16 +43,18 @@ cancel.addEventListener('click', () => {
 form.addEventListener('submit', formData)
 
 // Functions
-function Book(title, author, pages, status) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.status = status
+class Book {
+    constructor(title, author, pages, status) {
+        this.title = title
+        this.author = author
+        this.pages = pages
+        this.status = status
+        this.id = crypto.randomUUID()
+    }
 }
 
 function addBookToLibrary(title, author, pages, status = false) {
     const book = new Book(title, author, pages, status)
-    book.id = crypto.randomUUID()
     library.push(book)
 }
 

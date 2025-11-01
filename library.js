@@ -7,14 +7,16 @@ class Library {
         this.books.push(book)
     }
 
+    getID(id) {
+        return this.books.findIndex(book => book.id === id)
+    }
+
     delete(id) {
-        const index = this.books.findIndex(book => book.id === id)
-        this.books.splice(index, 1)
+        this.books.splice(this.getID(id), 1)
     }
     
     swapStatus(id) {
-        const index = this.books.findIndex(book => book.id === id)
-        this.books[index].status = !this.books[index].status
+        this.books[this.getID(id)].status = !this.books[this.getID(id)].status
     }
 }
 

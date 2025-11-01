@@ -46,7 +46,6 @@ cancel.addEventListener('click', () => {
 form.addEventListener('submit', formData)
 
 // Functions
-
 function formData(event) {
     event.preventDefault()
     const data = new FormData(event.target)
@@ -54,7 +53,6 @@ function formData(event) {
     const author = data.get('author')
     const pages = data.get('pages')
     const status = data.get('status')
-    console.log(status)
     const book = new Book(title, author, pages, status)
     library.add(book)
     form.reset()
